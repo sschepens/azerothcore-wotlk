@@ -663,7 +663,7 @@ public:
             counter = 0;
             unitList.clear();
             me->CastSpell(me, SPELL_HORSEMAN_MOUNT, true);
-            me->SetSpeed(MOVE_WALK, 3.0f, true);
+            me->SetSpeedRate(MOVE_WALK, 3.0f);
         }
 
         EventMap events;
@@ -1230,7 +1230,7 @@ public:
             health = 0;
 
             me->SetDisableGravity(true);
-            me->SetSpeed(MOVE_WALK, 5.0f, true);
+            me->SetSpeedRate(MOVE_WALK, 5.0f);
         }
 
         void UpdateAI(uint32 diff) override

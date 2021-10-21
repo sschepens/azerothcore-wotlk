@@ -1303,7 +1303,7 @@ public:
             events.ScheduleEvent(EVENT_TAKE_PASSENGER, 3000);
             me->SetCanFly(true);
             me->AddUnitMovementFlag(MOVEMENTFLAG_FLYING);
-            me->SetSpeed(MOVE_FLIGHT, 0.1f);
+            me->SetSpeedRate(MOVE_FLIGHT, 0.1f);
             me->setFaction(summoner->getFaction());
         }
 
@@ -1347,7 +1347,7 @@ public:
                         if (Vehicle* kit = me->GetVehicleKit())
                             if (Unit* turret = kit->GetPassenger(SEAT_TURRET))
                             {
-                                me->SetSpeed(MOVE_FLIGHT, 1.2f);
+                                me->SetSpeedRate(MOVE_FLIGHT, 1.2f);
                                 owner->RemoveAurasDueToSpell(SPELL_WAITING_FOR_A_BOMBER);
                                 turret->HandleSpellClick(owner, 0);
                                 return;

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * This file is part of the AzerothCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -406,7 +406,7 @@ public:
                 if (Unit* target = ObjectAccessor::GetUnit(*me, TargetGUID))
                     DoCast(target, SPELL_EAGLE_SWOOP, true);
                 TargetGUID.Clear();
-                me->SetSpeed(MOVE_RUN, 1.2f);
+                me->SetSpeedRate(MOVE_RUN, 1.2f);
                 EagleSwoop_Timer = urand(5000, 10000);
             }
         }
@@ -435,7 +435,7 @@ public:
                     {
                         target->GetContactPoint(me, x, y, z);
                         z += 2;
-                        me->SetSpeed(MOVE_RUN, 5.0f);
+                        me->SetSpeedRate(MOVE_RUN, 5.0f);
                         TargetGUID = target->GetGUID();
                     }
                     me->GetMotionMaster()->MovePoint(0, x, y, z);

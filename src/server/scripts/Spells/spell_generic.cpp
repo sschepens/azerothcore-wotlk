@@ -1566,7 +1566,7 @@ public:
                 caster->GetRandomNearPosition(pos, 5.0f);
                 if (Creature* haunt = caster->SummonCreature(NPC_SCOURGE_HAUNT, pos, TEMPSUMMON_TIMED_DESPAWN, urand(10, 20) * IN_MILLISECONDS))
                 {
-                    haunt->SetSpeed(MOVE_RUN, 0.5, true);
+                    haunt->SetSpeedRate(MOVE_RUN, 0.5);
                     haunt->GetMotionMaster()->MoveFollow(caster, 1, M_PI);
                 }
             }
@@ -1606,7 +1606,7 @@ public:
                 caster->GetRandomNearPosition(pos, 5.0f);
                 if (Creature* haunt = caster->SummonCreature(NPC_SCOURGE_HAUNT, pos, TEMPSUMMON_TIMED_DESPAWN, urand(10, 20) * IN_MILLISECONDS))
                 {
-                    haunt->SetSpeed(MOVE_RUN, 0.5, true);
+                    haunt->SetSpeedRate(MOVE_RUN, 0.5);
                     haunt->GetMotionMaster()->MoveFollow(caster, 1, M_PI);
                 }
             }

@@ -146,8 +146,8 @@ public:
             me->CastSpell(me, SPELL_DK_SANCTUARY, true);
             me->SetReactState(REACT_PASSIVE);
 
-            me->SetSpeed(MOVE_FLIGHT, 1.0f, true);
-            me->SetSpeed(MOVE_RUN, 1.0f, true);
+            me->SetSpeedRate(MOVE_FLIGHT, 1.0f);
+            me->SetSpeedRate(MOVE_RUN, 1.0f);
             float x = me->GetPositionX() + 20 * cos(me->GetOrientation());
             float y = me->GetPositionY() + 20 * sin(me->GetOrientation());
             float z = me->GetPositionZ() + 40;

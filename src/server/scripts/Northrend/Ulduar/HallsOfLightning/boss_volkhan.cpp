@@ -109,7 +109,7 @@ public:
             HealthCheck = 100;
             events.Reset();
             summons.DespawnAll();
-            me->SetSpeed(MOVE_RUN, 1.2f, true);
+            me->SetSpeedRate(MOVE_RUN, 1.2f);
             me->SetReactState(REACT_AGGRESSIVE);
 
             if (m_pInstance)
@@ -227,7 +227,7 @@ public:
 
             if (id == POINT_ANVIL)
             {
-                me->SetSpeed(MOVE_RUN, 1.2f, true);
+                me->SetSpeedRate(MOVE_RUN, 1.2f);
                 me->SetReactState(REACT_AGGRESSIVE);
                 me->CastSpell(me, SPELL_TEMPER, false);
                 PointID = 0;
@@ -261,7 +261,7 @@ public:
         {
             events.SetPhase(2);
             HealthCheck -= 20;
-            me->SetSpeed(MOVE_RUN, 4.0f, true);
+            me->SetSpeedRate(MOVE_RUN, 4.0f);
             me->SetReactState(REACT_PASSIVE);
 
             Talk(SAY_FORGE);

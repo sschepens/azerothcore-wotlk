@@ -249,7 +249,7 @@ public:
         {
             if (pSummoned)
             {
-                pSummoned->SetSpeed(MOVE_RUN, 0.3f);
+                pSummoned->SetSpeedRate(MOVE_RUN, 0.3f);
                 pSummoned->RemoveUnitMovementFlag(MOVEMENTFLAG_WALKING);
                 pSummoned->GetMotionMaster()->MoveFollow(me, 0, 0);
                 me->CastSpell(pSummoned, SPELL_CREATE_GLOBULE_VISUAL, true); // triggered should ignore los

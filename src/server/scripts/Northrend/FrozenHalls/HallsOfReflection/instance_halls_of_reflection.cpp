@@ -553,7 +553,7 @@ public:
                         c->setActive(false);
                         c->RemoveUnitMovementFlag(MOVEMENTFLAG_WALKING);
                         c->SetUInt32Value(UNIT_NPC_EMOTESTATE, EMOTE_ONESHOT_NONE);
-                        c->SetSpeed(MOVE_RUN, c->GetCreatureTemplate()->speed_run);
+                        c->SetSpeedRate(MOVE_RUN, c->GetCreatureTemplate()->speed_run);
                     }
                     IsDuringLKFight = false;
                     outroTimer = 0;
@@ -611,7 +611,7 @@ public:
                                 if (Creature* c = instance->GetCreature(NPC_QuelDelarGUID))
                                 {
                                     c->RemoveUnitMovementFlag(MOVEMENTFLAG_WALKING);
-                                    c->SetSpeed(MOVE_RUN, 2.5f);
+                                    c->SetSpeedRate(MOVE_RUN, 2.5f);
                                 }
                                 break;
                             case 5:
@@ -621,7 +621,7 @@ public:
                             case 6:
                                 if (Creature* c = instance->GetCreature(NPC_QuelDelarGUID))
                                 {
-                                    c->SetSpeed(MOVE_RUN, c->GetCreatureTemplate()->speed_run);
+                                    c->SetSpeedRate(MOVE_RUN, c->GetCreatureTemplate()->speed_run);
                                     c->GetMotionMaster()->MoveLand(0, c->GetPositionX(), c->GetPositionY(), 707.70f, 7.0f);
                                 }
                                 break;

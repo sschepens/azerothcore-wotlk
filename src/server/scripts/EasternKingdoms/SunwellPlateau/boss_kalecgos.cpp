@@ -391,7 +391,7 @@ public:
             events2.Reset();
             if (me->GetPositionY() < 750.0f)
             {
-                me->SetSpeed(MOVE_RUN, 2.4f);
+                me->SetSpeedRate(MOVE_RUN, 2.4f);
                 me->SetDisplayId(MODEL_KALECGOS_DRAGON);
                 me->SetDisableGravity(true);
                 me->GetMotionMaster()->MovePoint(0, 1483.30f, 657.99f, 28.0f, false, true);

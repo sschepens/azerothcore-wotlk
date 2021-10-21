@@ -398,7 +398,7 @@ public:
             {
                 case NPC_FLAME_TSUNAMI:
                 {
-                    summon->SetSpeed(MOVE_FLIGHT, 1.5f);
+                    summon->SetSpeedRate(MOVE_FLIGHT, 1.5f);
                     break;
                 }
                 case NPC_FIRE_CYCLONE:
@@ -730,7 +730,7 @@ struct boss_sartharion_dragonAI : public BossAI
         ClearInstance();
 
         me->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_IMMUNE_TO_NPC);
-        me->SetSpeed(MOVE_FLIGHT, 1.0f);
+        me->SetSpeedRate(MOVE_FLIGHT, 1.0f);
         me->SetCanFly(false);
         me->ResetLootMode();
         portalGUID.Clear();
@@ -816,7 +816,7 @@ struct boss_sartharion_dragonAI : public BossAI
 
         if (me->IsFlying())
         {
-            me->SetSpeed(MOVE_FLIGHT, 1.0f);
+            me->SetSpeedRate(MOVE_FLIGHT, 1.0f);
             me->SetCanFly(false);
         }
 
@@ -1067,7 +1067,7 @@ public:
             {
                 Talk(SAY_TENEBRON_RESPOND);
                 me->SetCanFly(true);
-                me->SetSpeed(MOVE_FLIGHT, 3.0f);
+                me->SetSpeedRate(MOVE_FLIGHT, 3.0f);
                 me->GetMotionMaster()->MovePath(me->GetEntry() * 10, false);
             }
         }
@@ -1250,7 +1250,7 @@ public:
             {
                 Talk(SAY_SHADRON_RESPOND);
                 me->SetCanFly(true);
-                me->SetSpeed(MOVE_FLIGHT, 3.0f);
+                me->SetSpeedRate(MOVE_FLIGHT, 3.0f);
                 me->GetMotionMaster()->MovePath(me->GetEntry() * 10, false);
             }
         }
@@ -1366,7 +1366,7 @@ public:
             {
                 Talk(SAY_SHADRON_RESPOND);
                 me->SetCanFly(true);
-                me->SetSpeed(MOVE_FLIGHT, 3.0f);
+                me->SetSpeedRate(MOVE_FLIGHT, 3.0f);
                 me->GetMotionMaster()->MovePath(me->GetEntry() * 10, false);
             }
         }

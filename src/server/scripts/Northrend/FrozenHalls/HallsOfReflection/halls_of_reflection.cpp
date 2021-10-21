@@ -1529,7 +1529,7 @@ public:
                     break;
                 case EVENT_LK_START_FOLLOWING:
                     {
-                        me->SetSpeed(MOVE_RUN, 9.0f / 7.0f);
+                        me->SetSpeedRate(MOVE_RUN, 9.0f / 7.0f);
                         Movement::PointsArray path;
                         path.push_back(G3D::Vector3(me->GetPositionX(), me->GetPositionY(), me->GetPositionZ()));
                         for (uint8 i = 0; i <= 2; ++i)
@@ -1539,7 +1539,7 @@ public:
                     break;
                 case EVENT_LK_REMORSELESS_WINTER:
                     {
-                        me->SetSpeed(MOVE_RUN, me->GetCreatureTemplate()->speed_run);
+                        me->SetSpeedRate(MOVE_RUN, me->GetCreatureTemplate()->speed_run);
                         Talk(SAY_LK_IW_1_SUMMON);
                         me->CastSpell(me, SPELL_REMORSELESS_WINTER, true);
                         Movement::PointsArray path;

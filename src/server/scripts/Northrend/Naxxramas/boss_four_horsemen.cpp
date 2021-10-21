@@ -300,7 +300,7 @@ public:
                 Talk(SAY_AGGRO);
                 me->SetReactState(REACT_PASSIVE);
                 movementPhase = MOVE_PHASE_STARTED;
-                me->SetSpeed(MOVE_RUN, me->GetSpeedRate(MOVE_RUN), true);
+                me->SetSpeedRate(MOVE_RUN, me->GetSpeedRate(MOVE_RUN));
                 MoveToCorner();
             }
             if (pInstance)

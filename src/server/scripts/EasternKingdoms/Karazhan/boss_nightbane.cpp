@@ -124,7 +124,7 @@ public:
             FlyCount = 0;
             MovePhase = 0;
 
-            me->SetSpeed(MOVE_RUN, 2.0f);
+            me->SetSpeedRate(MOVE_RUN, 2.0f);
             me->SetDisableGravity(Intro);
             me->SetWalk(false);
             me->setActive(true);

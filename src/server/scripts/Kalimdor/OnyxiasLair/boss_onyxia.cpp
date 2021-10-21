@@ -166,7 +166,7 @@ public:
             me->SetReactState(REACT_AGGRESSIVE);
             me->SetCanFly(false);
             me->SetDisableGravity(false);
-            me->SetSpeed(MOVE_RUN, me->GetCreatureTemplate()->speed_run, false);
+            me->SetSpeedRate(MOVE_RUN, me->GetCreatureTemplate()->speed_run);
 
             whelpSpam = false;
             whelpCount = 0;
@@ -267,7 +267,7 @@ public:
                 if( id > 0 && Phase == 2 )
                 {
                     me->SetFacingTo(OnyxiaMoveData[id].o);
-                    me->SetSpeed(MOVE_RUN, 1.6f, false);
+                    me->SetSpeedRate(MOVE_RUN, 1.6f);
                     CurrentWP = id;
                     events.ScheduleEvent(EVENT_SPELL_FIREBALL_FIRST, 1000);
                 }
@@ -289,7 +289,7 @@ public:
                     case 13:
                         me->SetCanFly(false);
                         me->SetDisableGravity(false);
-                        me->SetSpeed(MOVE_RUN, me->GetCreatureTemplate()->speed_run, false);
+                        me->SetSpeedRate(MOVE_RUN, me->GetCreatureTemplate()->speed_run);
                         events.ScheduleEvent(EVENT_PHASE_3_ATTACK, 0);
                         break;
                 }
@@ -392,7 +392,7 @@ public:
                     break;
                 case EVENT_FLY_S_TO_N:
                     {
-                        me->SetSpeed(MOVE_RUN, 2.95f, false);
+                        me->SetSpeedRate(MOVE_RUN, 2.95f);
                         me->GetMotionMaster()->MovePoint(5, OnyxiaMoveData[5].x, OnyxiaMoveData[5].y, OnyxiaMoveData[5].z);
 
                         whelpSpam = true;
@@ -476,13 +476,13 @@ public:
                 case EVENT_SPELL_BREATH:
                     {
                         uint8 newWP = OnyxiaMoveData[CurrentWP].DestId;
-                        me->SetSpeed(MOVE_RUN, 2.95f, false);
+                        me->SetSpeedRate(MOVE_RUN, 2.95f);
                         me->GetMotionMaster()->MovePoint(newWP, OnyxiaMoveData[newWP].x, OnyxiaMoveData[newWP].y, OnyxiaMoveData[newWP].z);
                     }
                     break;
                 case EVENT_START_PHASE_3:
                     {
-                        me->SetSpeed(MOVE_RUN, 2.95f, false);
+                        me->SetSpeedRate(MOVE_RUN, 2.95f);
                         me->GetMotionMaster()->MovePoint(12, OnyxiaMoveData[1].x, OnyxiaMoveData[1].y, OnyxiaMoveData[1].z);
                     }
                     break;

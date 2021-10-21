@@ -170,7 +170,7 @@ public:
             if( apply )
             {
                 me->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE);
-                me->SetSpeed(MOVE_RUN, 2.0f, false);
+                me->SetSpeedRate(MOVE_RUN, 2.0f);
                 me->CastSpell(me, SPELL_TRAMPLE_AURA, true);
             }
             else
@@ -488,7 +488,7 @@ public:
                 me->SetHealth(me->GetMaxHealth());
                 me->SetRegeneratingHealth(true);
                 me->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_PACIFIED);
-                me->SetSpeed(MOVE_RUN, 1.0f, false);
+                me->SetSpeedRate(MOVE_RUN, 1.0f);
                 me->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE);
                 me->RemoveUnitMovementFlag(MOVEMENTFLAG_WALKING);
                 me->RemoveAllAuras();

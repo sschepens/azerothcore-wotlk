@@ -216,7 +216,7 @@ public:
         void Reset() override
         {
             me->SetReactState(REACT_PASSIVE);
-            me->SetSpeed(MOVE_RUN, 1.4f, true);
+            me->SetSpeedRate(MOVE_RUN, 1.4f);
             me->CastSpell(me, SPELL_UNSTABLE_SPHERE_PASSIVE, true);
             me->CastSpell(me, SPELL_UNSTABLE_SPHERE_TIMER, true);
             timer = 0;

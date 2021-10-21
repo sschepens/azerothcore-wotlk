@@ -2320,11 +2320,11 @@ public:
     static void CalcAbsorbResist(DamageInfo& dmgInfo, bool Splited = false);
     static void CalcHealAbsorb(HealInfo& healInfo);
 
-    void  UpdateSpeed(UnitMoveType mtype, bool forced);
+    void  UpdateSpeed(UnitMoveType mtype);
     [[nodiscard]] float GetSpeed(UnitMoveType mtype) const;
     [[nodiscard]] float GetSpeedRate(UnitMoveType mtype) const { return m_speed_rate[mtype]; }
-    void SetSpeed(UnitMoveType mtype, float rate, bool forced = false);
-    void SetSpeedRate(UnitMoveType mtype, float rate) { m_speed_rate[mtype] = rate; }
+    void SetSpeed(UnitMoveType mtype, float rate);
+    void SetSpeedRate(UnitMoveType mtype, float rate);
 
     float ApplyEffectModifiers(SpellInfo const* spellProto, uint8 effect_index, float value) const;
     int32 CalculateSpellDamage(Unit const* target, SpellInfo const* spellProto, uint8 effect_index, int32 const* basePoints = nullptr) const;

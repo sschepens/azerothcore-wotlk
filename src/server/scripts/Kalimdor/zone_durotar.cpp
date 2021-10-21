@@ -387,8 +387,8 @@ public:
             else if (!owner->IsMounted() && target->IsMounted())
                 target->Dismount();
 
-            target->SetSpeed(MOVE_RUN, owner->GetSpeedRate(MOVE_RUN));
-            target->SetSpeed(MOVE_WALK, owner->GetSpeedRate(MOVE_WALK));
+            target->SetSpeedRate(MOVE_RUN, owner->GetSpeedRate(MOVE_RUN));
+            target->SetSpeedRate(MOVE_WALK, owner->GetSpeedRate(MOVE_WALK));
         }
 
         void Register() override

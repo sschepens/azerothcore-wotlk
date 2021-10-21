@@ -1028,7 +1028,7 @@ public:
                     if (AuraEffect* aEff = base->GetEffect(EFFECT_0))
                     {
                         aEff->SetAmount(mode == 1 ? 0 : -50);
-                        caster->UpdateSpeed(MOVE_RUN, true);
+                        caster->UpdateSpeed(MOVE_RUN);
                     }
         }
 

@@ -2039,8 +2039,8 @@ public:
         {
             if (!me->GetVehicle())
             {
-                me->SetSpeed(MOVE_RUN, me->GetSpeedRate(MOVE_RUN) + 0.4f, false);
-                me->SetSpeed(MOVE_FLIGHT, me->GetSpeedRate(MOVE_RUN), false);
+                me->SetSpeedRate(MOVE_RUN, me->GetSpeedRate(MOVE_RUN) + 0.4f);
+                me->SetSpeedRate(MOVE_FLIGHT, me->GetSpeedRate(MOVE_RUN));
             }
         }
     };

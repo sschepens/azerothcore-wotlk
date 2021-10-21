@@ -90,11 +90,11 @@ public:
                 if (player->HasAura(58081))
                     if (Unit* charm = player->GetCharm())
                     {
-                        charm->SetSpeed(MOVE_RUN, 2.14f, true);
+                        charm->SetSpeedRate(MOVE_RUN, 2.14f);
                         if (charm->GetMapId() == 530 || charm->GetMapId() == 571)
                         {
                             charm->SetCanFly(true);
-                            charm->SetSpeed(MOVE_FLIGHT, 2.14f, true);
+                            charm->SetSpeedRate(MOVE_FLIGHT, 2.14f);
                             charm->SendMovementFlagUpdate();
                         }
                     }

@@ -111,7 +111,7 @@ public:
                     break;
                 case EVENT_LAUNCH:
                     {
-                        me->SetSpeed(MOVE_FLIGHT, 5.0f, true);
+                        me->SetSpeedRate(MOVE_FLIGHT, 5.0f);
 
                         const Position EYE_DESTINATION_1 = { me->GetPositionX() - 40.0f, me->GetPositionY(), me->GetPositionZ() + 10.0f, 0.0f };
                         const Position EYE_DESTINATION_2 = { 1768.0f, -5876.0f, 153.0f, 0.0f };
@@ -124,7 +124,7 @@ public:
                     if (Player* player = me->GetCharmerOrOwnerPlayerOrPlayerItself())
                     {
                         me->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_STUNNED);
-                        me->SetSpeed(MOVE_FLIGHT, 3.3f, true);
+                        me->SetSpeedRate(MOVE_FLIGHT, 3.3f);
 
                         SetControl(player, true);
                         Talk(EYE_TEXT_CONTROL, player);
@@ -966,7 +966,7 @@ public:
 
                 //Not 100% correct, but movement is smooth. Sometimes miner walks faster
                 //than normal, this speed is fast enough to keep up at those times.
-                me->SetSpeed(MOVE_RUN, 1.25f);
+                me->SetSpeedRate(MOVE_RUN, 1.25f);
 
                 me->GetMotionMaster()->MoveFollow(miner, 1.0f, 0);
                 me->SetUInt32Value(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE | UNIT_FLAG_IMMUNE_TO_PC | UNIT_FLAG_IMMUNE_TO_NPC);

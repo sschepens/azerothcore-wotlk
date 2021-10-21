@@ -358,7 +358,7 @@ public:
         void Reset() override
         {
             me->SetRegeneratingHealth(true);
-            me->SetSpeed(MOVE_RUN, 1.14f, true); // ZOMG!
+            me->SetSpeedRate(MOVE_RUN, 1.14f); // ZOMG!
             setCharm = false;
             switching = false;
             startPath = false;
@@ -486,7 +486,7 @@ public:
                     me->setFaction(16);
                     charmer->SetClientControl(me, 0, true);
 
-                    me->SetSpeed(MOVE_RUN, 2.0f, true);
+                    me->SetSpeedRate(MOVE_RUN, 2.0f);
                     startPath = true;
                 }
                 else
@@ -844,7 +844,7 @@ public:
         void Reset() override
         {
             events.ScheduleEvent(EVENT_CHECK_AREA, 5000);
-            me->SetSpeed(MOVE_RUN, 2.0f);
+            me->SetSpeedRate(MOVE_RUN, 2.0f);
         }
 
         void MovementInform(uint32 type, uint32  /*id*/) override

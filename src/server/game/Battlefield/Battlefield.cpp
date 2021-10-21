@@ -818,8 +818,8 @@ Creature* Battlefield::SpawnCreature(uint32 entry, float x, float y, float z, fl
     creature->SetHomePosition(x, y, z, o);
 
     // force using DB speeds -- do we really need this?
-    creature->SetSpeed(MOVE_WALK, cinfo->speed_walk);
-    creature->SetSpeed(MOVE_RUN, cinfo->speed_run);
+    creature->SetSpeedRate(MOVE_WALK, cinfo->speed_walk);
+    creature->SetSpeedRate(MOVE_RUN, cinfo->speed_run);
 
     // Set creature in world
     map->AddToMap(creature);

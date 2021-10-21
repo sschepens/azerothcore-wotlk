@@ -534,7 +534,7 @@ public:
                 case 12:
                     if (Creature* arca = ObjectAccessor::GetCreature((*me), ArcanagosGUID))
                     {
-                        arca->SetSpeed(MOVE_RUN, 2.0f);
+                        arca->SetSpeedRate(MOVE_RUN, 2.0f);
                         arca->GetMotionMaster()->MovePoint(0, -11010.82f, -1761.18f, 156.47f);
                         arca->InterruptNonMeleeSpells(true);
                     }
